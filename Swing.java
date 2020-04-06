@@ -1,5 +1,11 @@
 package com.eonsahead.swing;
 
+
+// Using this code from Professor Leon and changed some values.
+// Minrui Yang
+
+
+
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
@@ -15,10 +21,10 @@ import javax.swing.JPanel;
 
 public class Swing extends JFrame implements ActionListener {
 
-    private final int FRAME_WIDTH = 512;
-    private final int FRAME_HEIGHT = 512;
-    private final String FRAME_TITLE = "Swing";
-    private final int NUMBER_OF_COLORS = 8;
+    private final int FRAME_WIDTH = 800;
+    private final int FRAME_HEIGHT = 800;
+    private final String FRAME_TITLE = "SwingProject";
+    private final int NUMBER_OF_COLORS = 9;
     private final String BG_COLOR = "Background Color";
     private final String FG_COLOR = "Foreground Color";
 
@@ -86,13 +92,13 @@ public class Swing extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent event) {
         String actionCommand = event.getActionCommand();
 
-        if (actionCommand.indexOf(BG_COLOR) >= 0) {
+        if (actionCommand.contains(BG_COLOR)) {
             int i = BG_COLOR.length();
             String suffix = actionCommand.substring(i).trim();
             int index = Integer.parseInt(suffix);
             this.panel.setBackground(bgPalette.get(index));
         } // if
-        else if (actionCommand.indexOf(FG_COLOR) >= 0) {
+        else if (actionCommand.contains(FG_COLOR)) {
             int i = FG_COLOR.length();
             String suffix = actionCommand.substring(i).trim();
             int index = Integer.parseInt(suffix);
