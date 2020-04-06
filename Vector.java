@@ -2,7 +2,8 @@ package com.eonsahead.swing;
 
 /**
  * 
- *  The 4 elements 
+ *  The 4 elements for Exercise 1. By creating this file, I searched a lot of 
+ *  sourse from google and using some ideas from classmates to get the exercise.
  * @author Minrui Yang
  * @version 4 April 2020
  */
